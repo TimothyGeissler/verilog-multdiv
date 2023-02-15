@@ -1,4 +1,4 @@
-module wallace_tb;
+module fourbitwallace_tb;
 
     // Inputs
     reg [3:0] A;
@@ -6,10 +6,10 @@ module wallace_tb;
 
     // Outputs
     wire [7:0] prod;
-    integer i,j,error;
+    integer i,j,score;
 
     // Instantiate the Unit Under Test (UUT)
-    wallace_tree uut (
+    fourbitwallace_tree uut (
         .A(A), 
         .B(B), 
         .prod(prod)
@@ -18,20 +18,20 @@ module wallace_tb;
     initial begin
         // Apply inputs for the whole range of A and B.
         // 16*16 = 256 inputs.
-        error = 0;
+        score = 0;
         for(i=0;i <=15;i = i+1)
             for(j=0;j <=15;j = j+1) begin
                 A <= i; 
                 B <= j;
                 #1;
-                if (prod != A*B) begin //if the result isnt correct increment "error".
-                    $display("Error");
-                    error = error + 1;  
-                end else begin
+                if (prod == A*B) begin
                     $display("%d * %d = %d -- CORRECT", A, B, prod);
+                    score = score + 1;  
+                end else begin
+                    $display("Error");
                 end
             end     
-            $display("Error: %d", error);
+            $display("Score: %d", score);
     end
       
 endmodule
