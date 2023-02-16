@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="timdg" Host="timdg-B550I-AORUS-PRO-AX" Pid="68823" HostCore="16" HostMemory="32813860">
+    </Process>
+</ProcessHandle>

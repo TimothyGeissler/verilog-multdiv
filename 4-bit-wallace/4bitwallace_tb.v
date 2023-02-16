@@ -9,7 +9,7 @@ module fourbitwallace_tb;
     integer i,j,score;
 
     // Instantiate the Unit Under Test (UUT)
-    fourbitwallace uut (A, B, prod);
+    simplewallace uut (A, B, prod);
 
     initial begin
         // Apply inputs for the whole range of A and B.

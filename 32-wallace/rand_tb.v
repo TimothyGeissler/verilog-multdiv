@@ -9,7 +9,7 @@ module wallace_tb;
     integer i,j,score;
 
     // Instantiate the Unit Under Test (UUT) input [31:0]a; input [31:0]b; output [63:0]c; 
-    wallace_64 uut (A, B, prod);
+    wallace32 uut (A, B, prod);
 
     initial begin
         // Apply inputs for the whole range of A and B.
