@@ -15,8 +15,8 @@ module fourbitwallace_tb;
         // Apply inputs for the whole range of A and B.
         // 16*16 = 256 inputs.
         score = 0;
-        for(i=0;i <=15;i = i+1)
-            for(j=0;j <=15;j = j+1) begin
+        for(i=-8;i <=7;i = i+1)
+            for(j=-8;j <=7;j = j+1) begin
                 A <= i; 
                 B <= j;
                 #1;
