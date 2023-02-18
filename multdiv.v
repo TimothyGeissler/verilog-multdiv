@@ -84,14 +84,33 @@ module full_adder(
     
 endmodule
 
-module wallace32(a, b, p, ovf);
+module wallace32(a, b, prod, ovf);
     input [31:0] a, b;
-    output [63:0] p;
+    output [31:0] prod;
 	output ovf; // Overflow
 
-	// Check overflow ovfchk(ovf, b);
-	//ovfchk o(ovf, p);
-	assign ovf = 1'b0;
+	wire [63:0] p;
+
+	// Check overflow into high 32 bits
+	/*wire allones, allzeros, highBit;
+	assign allones = &p[63:31];
+	assign allzeros = ~|p[63:31];
+	assign highBit = ~(allones | allzeros); //ovf = 1 if !allzeros and !allones*/
+
+	//Check if a != 0, b != 0, and p = 0 then ovf
+	wire zeroOvf, zero2it;
+	assign zeroOvf = a && b && ~p[31:0];
+
+	//check signs match
+	wire signMismatch;
+	xor(signMismatch, a[31], b[31], p[31]); //(a[31] & b[31] & p[31]) | (a[31] & ~b[31] & ~p[31]) | (~a[31] & ~b[31] & p[31]) | (~a[31] & b[31] & ~p[31]);
+	
+	// Ovf if mismatch | highBit
+	assign zero2it = (signMismatch == 0) && (zeroOvf == 1);
+	assign ovf = signMismatch;// || zero2it;
+
+	//Assign lower half of p
+	assign prod = p[31:0];
 
     wire Cout;
 
@@ -664,10 +683,9 @@ module multdiv(
     output data_exception, data_resultRDY;
 
     // add your code here
-    wire [63:0] res;
-    wallace32 mult(data_operandA, data_operandB, res, data_exception);
+    wallace32 mult(data_operandA, data_operandB, data_result, data_exception);
 
-    assign data_result = res[31:0];
+    //assign data_result = res[31:0];
     //assign data_exception = 1'b0;
     assign data_resultRDY = 1'b1;
 
