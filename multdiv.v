@@ -92,13 +92,16 @@ module wallace32(a, b, prod, ovf);
 	wire [63:0] p;
 
 	// Check overflow into high 32 bits
-	/*wire allones, allzeros, highBit;
-	assign allones = &p[63:31];
-	assign allzeros = ~|p[63:31];
-	assign highBit = ~(allones | allzeros); //ovf = 1 if !allzeros and !allones*/
+	wire allones, allzeros, highBit, msb_match;
+	assign allones = & p[63:32];
+	assign allzeros = | p[63:32];
+	assign topAllSame = allones ^ allzeros; //ovf = 1 if !allzeros and !allones*/
+	assign msb_match = allzeros ^ p[31];
+	assign ovf = topAllSame | msb_match; //signMismatch;// || zero2it;
+
 
 	//Check if a != 0, b != 0, and p = 0 then ovf
-	wire zeroOvf, zero2it;
+	/*wire zeroOvf, zero2it;
 	assign zeroOvf = a && b && ~p[31:0];
 
 	//check signs match
@@ -106,8 +109,7 @@ module wallace32(a, b, prod, ovf);
 	xor(signMismatch, a[31], b[31], p[31]); //(a[31] & b[31] & p[31]) | (a[31] & ~b[31] & ~p[31]) | (~a[31] & ~b[31] & p[31]) | (~a[31] & b[31] & ~p[31]);
 	
 	// Ovf if mismatch | highBit
-	assign zero2it = (signMismatch == 0) && (zeroOvf == 1);
-	assign ovf = signMismatch;// || zero2it;
+	assign zero2it = (signMismatch == 0) && (zeroOvf == 1);*/
 
 	//Assign lower half of p
 	assign prod = p[31:0];
