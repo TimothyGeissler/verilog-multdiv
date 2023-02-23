@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1676511615">
-  <File Type="VDS-TIMINGSUMMARY" Name="wallace32_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="wallace32.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="wallace32_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="wallace32_utilization_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="wallace32_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="wallace32.tcl"/>
-  <File Type="REPORTS-TCL" Name="wallace32_reports.tcl"/>
-  <File Type="RDS-RDS" Name="wallace32.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="wallace32_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1677134363" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/wallace32.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="multdiv_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="multdiv.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="multdiv_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="multdiv_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="multdiv_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="multdiv.vds"/>
+  <File Type="REPORTS-TCL" Name="multdiv_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="multdiv_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="multdiv.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../32-wallace/wallace32.v">
+    <File Path="$PPRDIR/../old-multdiv.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -20,7 +20,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="wallace32"/>
+      <Option Name="TopModule" Val="multdiv"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -32,14 +32,20 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/wallace32.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

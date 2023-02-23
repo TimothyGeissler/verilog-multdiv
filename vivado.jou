@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Feb 23 01:38:40 2023
+# Process ID: 33086
+# Current directory: /home/timdg/Documents/verilog-cpu/verilog-multdiv
+# Command line: vivado
+# Log file: /home/timdg/Documents/verilog-cpu/verilog-multdiv/vivado.log
+# Journal file: /home/timdg/Documents/verilog-cpu/verilog-multdiv/vivado.jou
+# Running On: timdg-B550I-AORUS-PRO-AX, OS: Linux, CPU Frequency: 4587.736 MHz, CPU Physical cores: 16, Host memory: 33600 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/timdg/Documents/verilog-cpu/verilog-multdiv/32-wallace/wallace32.v] -no_script -reset -force -quiet
+remove_files  /home/timdg/Documents/verilog-cpu/verilog-multdiv/32-wallace/wallace32.v
+add_files -norecurse /home/timdg/Documents/verilog-cpu/verilog-multdiv/old-multdiv.v
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1

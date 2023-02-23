@@ -1,0 +1,837 @@
+$date
+	Thu Feb 23 11:13:04 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module sixtff_tb $end
+$var wire 1 ! q5 $end
+$var wire 1 " q4 $end
+$var wire 1 # q3 $end
+$var wire 1 $ q2 $end
+$var wire 1 % q1 $end
+$var wire 1 & q0 $end
+$var reg 1 ' clk $end
+$var reg 1 ( reset $end
+$var integer 32 ) i [31:0] $end
+$scope module counter $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 * w1 $end
+$var wire 1 + w2 $end
+$var wire 1 , w3 $end
+$var wire 1 - w4 $end
+$var wire 1 ! q5 $end
+$var wire 1 " q4 $end
+$var wire 1 # q3 $end
+$var wire 1 $ q2 $end
+$var wire 1 % q1 $end
+$var wire 1 & q0 $end
+$scope module t1 $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 . d $end
+$var wire 1 / t $end
+$var wire 1 & q $end
+$scope module dflipflop $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 . d $end
+$var wire 1 0 en $end
+$var reg 1 & q $end
+$upscope $end
+$upscope $end
+$scope module t2 $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 1 d $end
+$var wire 1 & t $end
+$var wire 1 % q $end
+$scope module dflipflop $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 1 d $end
+$var wire 1 2 en $end
+$var reg 1 % q $end
+$upscope $end
+$upscope $end
+$scope module t3 $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 3 d $end
+$var wire 1 * t $end
+$var wire 1 $ q $end
+$scope module dflipflop $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 3 d $end
+$var wire 1 4 en $end
+$var reg 1 $ q $end
+$upscope $end
+$upscope $end
+$scope module t4 $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 5 d $end
+$var wire 1 + t $end
+$var wire 1 # q $end
+$scope module dflipflop $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 5 d $end
+$var wire 1 6 en $end
+$var reg 1 # q $end
+$upscope $end
+$upscope $end
+$scope module t5 $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 7 d $end
+$var wire 1 , t $end
+$var wire 1 " q $end
+$scope module dflipflop $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 7 d $end
+$var wire 1 8 en $end
+$var reg 1 " q $end
+$upscope $end
+$upscope $end
+$scope module t6 $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 9 d $end
+$var wire 1 - t $end
+$var wire 1 ! q $end
+$scope module dflipflop $end
+$var wire 1 ' clk $end
+$var wire 1 ( clr $end
+$var wire 1 9 d $end
+$var wire 1 : en $end
+$var reg 1 ! q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1:
+09
+18
+07
+16
+05
+14
+03
+12
+11
+10
+1/
+0.
+0-
+0,
+0+
+0*
+b0 )
+0(
+1'
+1&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+0'
+b1 )
+#20
+1.
+1%
+0&
+1'
+b10 )
+#30
+0'
+b11 )
+#40
+13
+01
+0.
+1*
+1&
+1'
+b100 )
+#50
+0'
+b101 )
+#60
+1.
+0*
+1$
+0%
+0&
+1'
+b110 )
+#70
+0'
+b111 )
+#80
+11
+0.
+1&
+1'
+b1000 )
+#90
+0'
+b1001 )
+#100
+1.
+1%
+0&
+1'
+b1010 )
+#110
+0'
+b1011 )
+#120
+15
+1+
+03
+01
+0.
+1*
+1&
+1'
+b1100 )
+#130
+0'
+b1101 )
+#140
+0+
+1.
+0*
+1#
+0$
+0%
+0&
+1'
+b1110 )
+#150
+0'
+b1111 )
+#160
+11
+0.
+1&
+1'
+b10000 )
+#170
+0'
+b10001 )
+#180
+1.
+1%
+0&
+1'
+b10010 )
+#190
+0'
+b10011 )
+#200
+13
+01
+0.
+1*
+1&
+1'
+b10100 )
+#210
+0'
+b10101 )
+#220
+1.
+0*
+1$
+0%
+0&
+1'
+b10110 )
+#230
+0'
+b10111 )
+#240
+11
+0.
+1&
+1'
+b11000 )
+#250
+0'
+b11001 )
+#260
+1.
+1%
+0&
+1'
+b11010 )
+#270
+0'
+b11011 )
+#280
+17
+1,
+05
+1+
+03
+01
+0.
+1*
+1&
+1'
+b11100 )
+#290
+0'
+b11101 )
+#300
+0,
+0+
+1.
+0*
+1"
+0#
+0$
+0%
+0&
+1'
+b11110 )
+#310
+0'
+b11111 )
+#320
+11
+0.
+1&
+1'
+b100000 )
+#330
+0'
+b100001 )
+#340
+1.
+1%
+0&
+1'
+b100010 )
+#350
+0'
+b100011 )
+#360
+13
+01
+0.
+1*
+1&
+1'
+b100100 )
+#370
+0'
+b100101 )
+#380
+1.
+0*
+1$
+0%
+0&
+1'
+b100110 )
+#390
+0'
+b100111 )
+#400
+11
+0.
+1&
+1'
+b101000 )
+#410
+0'
+b101001 )
+#420
+1.
+1%
+0&
+1'
+b101010 )
+#430
+0'
+b101011 )
+#440
+15
+1+
+03
+01
+0.
+1*
+1&
+1'
+b101100 )
+#450
+0'
+b101101 )
+#460
+0+
+1.
+0*
+1#
+0$
+0%
+0&
+1'
+b101110 )
+#470
+0'
+b101111 )
+#480
+11
+0.
+1&
+1'
+b110000 )
+#490
+0'
+b110001 )
+#500
+1.
+1%
+0&
+1'
+b110010 )
+#510
+0'
+b110011 )
+#520
+13
+01
+0.
+1*
+1&
+1'
+b110100 )
+#530
+0'
+b110101 )
+#540
+1.
+0*
+1$
+0%
+0&
+1'
+b110110 )
+#550
+0'
+b110111 )
+#560
+11
+0.
+1&
+1'
+b111000 )
+#570
+0'
+b111001 )
+#580
+1.
+1%
+0&
+1'
+b111010 )
+#590
+0'
+b111011 )
+#600
+19
+1-
+07
+1,
+05
+1+
+03
+01
+0.
+1*
+1&
+1'
+b111100 )
+#610
+0'
+b111101 )
+#620
+0-
+0,
+0+
+1.
+0*
+1!
+0"
+0#
+0$
+0%
+0&
+1'
+b111110 )
+#630
+0'
+b111111 )
+#640
+11
+0.
+1&
+1'
+b1000000 )
+#650
+0'
+b1000001 )
+#660
+1.
+1%
+0&
+1'
+b1000010 )
+#670
+0'
+b1000011 )
+#680
+13
+01
+0.
+1*
+1&
+1'
+b1000100 )
+#690
+0'
+b1000101 )
+#700
+1.
+0*
+1$
+0%
+0&
+1'
+b1000110 )
+#710
+0'
+b1000111 )
+#720
+11
+0.
+1&
+1'
+b1001000 )
+#730
+0'
+b1001001 )
+#740
+1.
+1%
+0&
+1'
+b1001010 )
+#750
+0'
+b1001011 )
+#760
+15
+1+
+03
+01
+0.
+1*
+1&
+1'
+b1001100 )
+#770
+0'
+b1001101 )
+#780
+0+
+1.
+0*
+1#
+0$
+0%
+0&
+1'
+b1001110 )
+#790
+0'
+b1001111 )
+#800
+11
+0.
+1&
+1'
+b1010000 )
+#810
+0'
+b1010001 )
+#820
+1.
+1%
+0&
+1'
+b1010010 )
+#830
+0'
+b1010011 )
+#840
+13
+01
+0.
+1*
+1&
+1'
+b1010100 )
+#850
+0'
+b1010101 )
+#860
+1.
+0*
+1$
+0%
+0&
+1'
+b1010110 )
+#870
+0'
+b1010111 )
+#880
+11
+0.
+1&
+1'
+b1011000 )
+#890
+0'
+b1011001 )
+#900
+1.
+1%
+0&
+1'
+b1011010 )
+#910
+0'
+b1011011 )
+#920
+17
+1,
+05
+1+
+03
+01
+0.
+1*
+1&
+1'
+b1011100 )
+#930
+0'
+b1011101 )
+#940
+0,
+0+
+1.
+0*
+1"
+0#
+0$
+0%
+0&
+1'
+b1011110 )
+#950
+0'
+b1011111 )
+#960
+11
+0.
+1&
+1'
+b1100000 )
+#970
+0'
+b1100001 )
+#980
+1.
+1%
+0&
+1'
+b1100010 )
+#990
+0'
+b1100011 )
+#1000
+13
+01
+0.
+1*
+1&
+1'
+b1100100 )
+#1010
+0'
+b1100101 )
+#1020
+1.
+0*
+1$
+0%
+0&
+1'
+b1100110 )
+#1030
+0'
+b1100111 )
+#1040
+11
+0.
+1&
+1'
+b1101000 )
+#1050
+0'
+b1101001 )
+#1060
+1.
+1%
+0&
+1'
+b1101010 )
+#1070
+0'
+b1101011 )
+#1080
+15
+1+
+03
+01
+0.
+1*
+1&
+1'
+b1101100 )
+#1090
+0'
+b1101101 )
+#1100
+0+
+1.
+0*
+1#
+0$
+0%
+0&
+1'
+b1101110 )
+#1110
+0'
+b1101111 )
+#1120
+11
+0.
+1&
+1'
+b1110000 )
+#1130
+0'
+b1110001 )
+#1140
+1.
+1%
+0&
+1'
+b1110010 )
+#1150
+0'
+b1110011 )
+#1160
+13
+01
+0.
+1*
+1&
+1'
+b1110100 )
+#1170
+0'
+b1110101 )
+#1180
+1.
+0*
+1$
+0%
+0&
+1'
+b1110110 )
+#1190
+0'
+b1110111 )
+#1200
+11
+0.
+1&
+1'
+b1111000 )
+#1210
+0'
+b1111001 )
+#1220
+1.
+1%
+0&
+1'
+b1111010 )
+#1230
+0'
+b1111011 )
+#1240
+09
+1-
+07
+1,
+05
+1+
+03
+01
+0.
+1*
+1&
+1'
+b1111100 )
+#1250
+0'
+b1111101 )
+#1260
+0-
+0,
+0+
+1.
+0*
+0!
+0"
+0#
+0$
+0%
+0&
+1'
+b1111110 )
+#1270
+b1111111 )

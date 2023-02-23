@@ -1,0 +1,231 @@
+/*
+
+Xilinx Vivado v2022.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3671981 on Fri Oct 14 04:59:54 MDT 2022
+IP Build: 3669848 on Fri Oct 14 08:30:02 MDT 2022
+
+Process ID (PID): 33086
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Feb 23 01:38:50 EST 2023
+Time zone: 	Eastern Standard Time (America/Kentucky/Monticello)
+
+OS: Ubuntu
+OS Version: 5.19.0-32-generic
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: 1
+Screen size: 2560x1440
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	timdg
+User home directory: /home/timdg
+User working directory: /home/timdg/Documents/verilog-cpu/verilog-multdiv
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2022.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: /home/timdg/.Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: /home/timdg/.Xilinx/Vivado/2022.2/
+Vivado layouts directory: /home/timdg/.Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/timdg/Documents/verilog-cpu/verilog-multdiv/vivado.log
+Vivado journal file: 	/home/timdg/Documents/verilog-cpu/verilog-multdiv/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-33086-timdg-B550I-AORUS-PRO-AX
+
+Xilinx Environment Variables
+----------------------------
+RDI_APPROOT: /tools/Xilinx/Vivado/2022.2
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2022.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2022.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/vivado
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2022.2/tps/lnx64
+RDI_USE_JDK11: True
+XILINX: /tools/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2022.2
+XILINX_VITIS: 
+XILINX_VIVADO: /tools/Xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2022.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,161 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.xpr", 0); // b.a
+// Opening Vivado Project: /home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.xpr. Version: Vivado v2022.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project /home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 90 MB (+92115kb) [00:00:08]
+// [Engine Memory]: 1,266 MB (+1175755kb) [00:00:08]
+// WARNING: HEventQueue.dispatchEvent() is taking  1103 ms.
+// Tcl Message: open_project /home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,322 MB. GUI used memory: 69 MB. Current time: 2/23/23, 1:38:52 AM EST
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'. 
+// Project name: wallace-tree-vivado; location: /home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado; part: xc7a12ticsg325-1L
+dismissDialog("Open Project"); // bq
+// [GUI Memory]: 109 MB (+14846kb) [00:00:09]
+// [Engine Memory]: 1,330 MB (+696kb) [00:00:09]
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Tcl Message: update_compile_order -fileset sources_1 
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wallace32 (wallace32.v)]", 1, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wallace32 (wallace32.v)]", 1); // D
+// [GUI Memory]: 127 MB (+12892kb) [00:00:14]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wallace32 (wallace32.v)]", 1, true); // D - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/timdg/Documents/verilog-cpu/verilog-multdiv/32-wallace/wallace32.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/timdg/Documents/verilog-cpu/verilog-multdiv/32-wallace/wallace32.v 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wallace32 (wallace32.v)]", 1, true); // D - Node
+// TclEventType: FILE_SET_CHANGE
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // B
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ao
+setFileChooser("/home/timdg/Documents/verilog-cpu/verilog-multdiv/old-multdiv.v");
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 7 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/timdg/Documents/verilog-cpu/verilog-multdiv/old-multdiv.v 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,393 MB. GUI used memory: 71 MB. Current time: 2/23/23, 1:39:16 AM EST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1160] Copying file /home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.runs/synth_1/wallace32.dcp to /home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.srcs/utils_1/imports/synth_1 and adding it to utils fileset 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 1,410 MB (+14860kb) [00:00:36]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Thu Feb 23 01:39:23 2023] Launched synth_1... Run output will be captured here: /home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.runs/synth_1/runme.log 
+// 'i' command handler elapsed time: 7 seconds
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 31 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a12ticsg325-1L 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,431 MB. GUI used memory: 76 MB. Current time: 2/23/23, 1:39:56 AM EST
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 1,765 MB (+298292kb) [00:01:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,765 MB. GUI used memory: 76 MB. Current time: 2/23/23, 1:39:58 AM EST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [GUI Memory]: 143 MB (+10471kb) [00:01:15]
+// [Engine Memory]: 1,907 MB (+55362kb) [00:01:15]
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a12ticsg325-1L 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 6886.988 ; gain = 0.000 ; free physical = 19004 ; free virtual = 57122 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2022.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6987.523 ; gain = 0.000 ; free physical = 18938 ; free virtual = 57057 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// 'dD' command handler elapsed time: 3 seconds
+dismissDialog("Open Synthesized Design"); // bq
+selectButton(PAResourceCommand.PACommandNames_SCHEMATIC, "run_schematic"); // B
+// RouteApi::initDelayMediator elapsed time: 3.5s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// [Engine Memory]: 2,261 MB (+272003kb) [00:01:19]
+// [GUI Memory]: 151 MB (+1190kb) [00:01:22]
+// [GUI Memory]: 160 MB (+1050kb) [00:01:32]
+// PAPropertyPanels.initPanels (mult/genblk25[10].f25/ha1_sum) elapsed time: 0.2s
+// Elapsed time: 30 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multdiv, Nets (4359), mult/genblk25[0].f25/ha1_sum]", 1925, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multdiv, Nets (4359), mult/genblk24[30].f24/ha1_sum]", 1923, false); // aF
+// [GUI Memory]: 170 MB (+2372kb) [00:02:22]
+// WARNING: HEventQueue.dispatchEvent() is taking  30543818 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,261 MB. GUI used memory: 114 MB. Current time: 2/23/23, 10:16:47 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,261 MB. GUI used memory: 100 MB. Current time: 2/23/23, 10:46:47 AM EST

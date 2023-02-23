@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log wallace32.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source wallace32.tcl
+EAStep vivado -log multdiv.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source multdiv.tcl

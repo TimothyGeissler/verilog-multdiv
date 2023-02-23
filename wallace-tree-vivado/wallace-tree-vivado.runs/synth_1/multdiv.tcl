@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.runs/synth_1/wallace32.tcl"
+  variable script "/home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.runs/synth_1/multdiv.tcl"
   variable category "vivado_synth"
 }
 
@@ -84,7 +84,7 @@ set_property ip_output_repo /home/timdg/Documents/verilog-cpu/verilog-multdiv/wa
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/timdg/Documents/verilog-cpu/verilog-multdiv/32-wallace/wallace32.v
+read_verilog -library xil_defaultlib /home/timdg/Documents/verilog-cpu/verilog-multdiv/old-multdiv.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -95,10 +95,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/timdg/Documents/verilog-cpu/verilog-multdiv/wallace-tree-vivado/wallace-tree-vivado.srcs/utils_1/imports/synth_1/wallace32.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top wallace32 -part xc7a12ticsg325-1L
+synth_design -top multdiv -part xc7a12ticsg325-1L
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -108,10 +110,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef wallace32.dcp
+write_checkpoint -force -noxdef multdiv.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file wallace32_utilization_synth.rpt -pb wallace32_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file multdiv_utilization_synth.rpt -pb multdiv_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

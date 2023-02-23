@@ -6,4 +6,4 @@
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log wallace32.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source wallace32.tcl
+vivado -log multdiv.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source multdiv.tcl
