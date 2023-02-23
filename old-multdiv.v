@@ -84,12 +84,24 @@ module full_adder(
     
 endmodule
 
-module wallace32(a, b, prod, ovf);
-    input [31:0] a, b;
+module wallace32(compA, compB, prod, ovf);
+    input [31:0] compA, compB;
     output [31:0] prod;
 	output ovf; // Overflow
 
 	wire [63:0] p;
+
+	// If MSB = 1 do twos comp
+	wire [31:0] a, b;
+	assign a = compA[31] ? (~compA) + 1 : compA; // 2s comp A to positive
+	assign b = compB[31] ? (~compB) + 1 : compB; // 2s comp B to positive
+
+	// Flag to check for 2s comp flip
+	wire twosComp;
+	assign twosComp = compA[31] ^ compB[31];
+
+	wire [63:0] compProd;
+	assign compProd = twosComp ? (~p) + 1 : p;
 
 	// Check overflow into high 32 bits
 	/*wire allones, allzeros, highBit, msb_match;
@@ -110,10 +122,11 @@ module wallace32(a, b, prod, ovf);
 	
 	// Ovf if mismatch | highBit
 	assign zero2it = (signMismatch == 0) && (zeroOvf == 1);
-	assign ovf = zeroOvf;//signMismatch;
+	assign ovf = signMismatch;
 
 	//Assign lower half of p
-	assign prod = p[31:0];
+	assign prod = compProd[31:0];
+
 
     wire Cout;
 

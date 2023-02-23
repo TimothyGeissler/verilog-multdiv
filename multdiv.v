@@ -95,10 +95,10 @@ and(P, Pi, Pip);
 endmodule
 
 module thirty_two_wallace_multipiler(
-output [31:0] p, 	
+output [31:0] prod, 	
 input [31:0] a,		
-input [31:0] b,
-output data_exception);
+input [31:0] b, 
+output ovf);
 
 wire twosComp;
 assign twosComp = a[31] ^ b[31];
@@ -112,20 +112,19 @@ assign compA = a[31] ? (~a) + 1 : a; // 2s comp A to positive
 assign compB = b[31] ? (~b) + 1 : b; // 2s comp B to positive
 
 // if toggle flag = 1 then twos comp product
-wire [63:0] product, prodComp;
-assign prodComp = twosComp ? (~product) + 1 : product;
+wire [63:0] product, compProd;
+assign compProd = twosComp ? (~product) + 1 : product;
 
-assign p = prodComp[31:0]; // Assign bottom 32 bits to output
+assign prod = compProd[31:0];
 
-// overflow check
+// Overflow logic
 wire allones, allzeros, highBit, msb_match;
-	assign allones = & prod[63:32];
-	assign allzeros = | prod[63:32];
-	assign topAllSame = allones ^ allzeros; //ovf = 1 if !allzeros and !allones
-	assign msb_match = allzeros ^ prod[31];
-	assign ovf = topAllSame | msb_match;
+assign allones = & compProd[63:32];
+assign allzeros = | compProd[63:32];
+assign topAllSame = allones ^ allzeros; //ovf = 1 if !allzeros and !allones
+assign msb_match = allzeros ^ compProd[31];
+assign ovf = topAllSame | msb_match;
 
-//Wallace tree
 wire [31:0][63:0]pps;		//partial products
 	partialmulti partialmultiplications(pps,compA,compB);
 

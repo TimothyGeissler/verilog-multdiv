@@ -64,9 +64,28 @@ module full_adder(
     
 endmodule
 
-module fourbitwallace(a, b, p);
-    input [3:0] a, b;
-    output [7:0] p;
+module fourbitwallace(aIn, bIn, compProd, ovf);
+    input [3:0] aIn, bIn;
+    output [7:0] compProd;
+    output ovf;
+
+    wire twosComp;
+    assign twosComp = aIn[3] ^ bIn[3];
+
+    wire [3:0] a, b;
+    assign a = aIn[3] ? (~aIn) + 1 : aIn; // 2s comp A to positive
+    assign b = bIn[3] ? (~bIn) + 1 : bIn; // 2s comp B to positive
+
+    // if toggle flag = 1 then twos comp product
+    wire [7:0] p;
+    assign compProd = twosComp ? (~p) + 1 : p;
+
+    wire allones, allzeros, high_bits, msb_match;
+	assign allones = & p[7:4];
+	assign allzeros = | p[7:4];
+	assign high_bits = allones ^ allzeros; //ovf = 1 if !allzeros and !allones
+	assign msb_match = allzeros ^ p[3];
+	assign ovf = high_bits & msb_match;
 
     wire Cout;
 
