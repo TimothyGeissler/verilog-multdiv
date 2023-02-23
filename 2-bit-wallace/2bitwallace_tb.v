@@ -1,22 +1,22 @@
-module fourbitwallace_tb;
+module twobitwallace_tb;
 
     // Inputs
-    reg signed [3:0] A;
-    reg signed [3:0] B;
+    reg signed [1:0] A;
+    reg signed [1:0] B;
 
     // Outputs
-    wire signed [7:0] prod;
+    wire signed [3:0] prod;
     integer i,j,score;
 
     // Instantiate the Unit Under Test (UUT)
-    copywallace uut (A, B, prod);
+    twobitwallace uut (A, B, prod);
 
     initial begin
         // Apply inputs for the whole range of A and B.
         // 16*16 = 256 inputs.
         score = 0;
-        for(i=-8;i <=7;i = i+1)
-            for(j=-8;j <=7;j = j+1) begin
+        for(i=-2;i <=1;i = i+1)
+            for(j=-2;j <=1;j = j+1) begin
                 A <= i; 
                 B <= j;
                 #1;

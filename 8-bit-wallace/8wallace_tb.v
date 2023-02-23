@@ -1,23 +1,23 @@
 module eightbitwallace_tb;
 
     // Inputs
-    reg [7:0] A;
-    reg [7:0] B;
+    reg signed [31:0] A;
+    reg signed [31:0] B;
 
     // Outputs
-    wire [15:0] prod;
+    wire signed [63:0] prod;
     integer i, j, score, total;
 
     // Instantiate the Unit Under Test (UUT)
-    eightwallace uut (A, B, prod);
+     thirty_two_wallace_multipiler wallace(A, B, prod);
 
     initial begin
         // Apply inputs for the whole range of A and B.
         // 16*16 = 256 inputs.
         score = 0;
         total = 0;
-        for(i=0;i <=256;i = i+1)
-            for(j=0;j <=256;j = j+1) begin
+        for(i=-128;i <=127;i = i+1)
+            for(j=-128;j <=127;j = j+1) begin
                 A <= i; 
                 B <= j;
                 total = total + 1;
